@@ -6,7 +6,7 @@ import Result from '../result/result.component';
 import {checkWinner} from '../../utils/board/board.utils';
 import CustomButton from '../custom-button/custom-button.component';
 
-const Board = ({player1 , player2}) => {   
+const Board = ({history,player1 , player2}) => {   
    
     const [squares,setSquares] = useState(Array(9).fill(null));
     const [turn,setTurn] = useState(0);
@@ -44,6 +44,12 @@ const Board = ({player1 , player2}) => {
          setResult("");
          e.preventDefault();
      }
+    function handleNew(e){
+        e.preventDefault();
+        handleReset(e);
+        history.push('/');
+
+    }
     return (
         <div className="container">
             <div className="player-info">
@@ -60,10 +66,12 @@ const Board = ({player1 , player2}) => {
             }
             
             </div>
-            {
-                result !== "" ? <Result result={result}/>:null
-            }
-            <button className="reset" onClick={(e)=>handleReset(e)}>Reset</button>
+            <Result result={result}/>
+            <div className="buttons-2">
+                <button className="reset" onClick={(e)=>handleReset(e)}>Reset</button>
+                <button className="new-game" onClick={(e)=>handleNew(e)}>New Game</button>
+            </div>
+            
     </div>
     )
 }

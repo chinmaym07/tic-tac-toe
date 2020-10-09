@@ -3,6 +3,7 @@ import Board from './components/board/board.component';
 import './App.css';
 import {Route,Switch} from 'react-router-dom';
 import PlayerLogin from './components/player-login/player-login.component';
+import Footer from './components/footer/footer.component';
 
 function App() {
   const [player1,setPlayer1] = useState("");
@@ -13,9 +14,10 @@ function App() {
         <h1>Tic Tac Toe</h1>
       </div>
       <Switch>
-        <Route exact path='/' render={() => (<PlayerLogin player1={player1} player2={player2} setPlayer1={setPlayer1} setPlayer2={setPlayer2}/>)} />
-        <Route path='/game'render={()=>(<Board player1={player1} player2={player2}/>)} />
+        <Route exact path='/' render={(routeProps) => (<PlayerLogin player1={player1} player2={player2} setPlayer1={setPlayer1} setPlayer2={setPlayer2} {...routeProps}/>)} />
+        <Route path='/game'render={(routeProps)=>(<Board player1={player1} player2={player2} {...routeProps}/>)} />
       </Switch>
+      <Footer />
     </div>
   );
 }

@@ -1,7 +1,9 @@
 
 
 
-
+.container{
+    height: 760px;
+}
 .board
 {
     padding: 10px 20px;
@@ -9,4 +11,11 @@
     justify-content: center;
     display: grid;
     grid-template-columns: auto auto auto;
+    grid-template-rows: 125px 125px 125px;
+    
+}
+.buttons-2
+{
+    display: flex;
+    justify-content: space-evenly;
 }
