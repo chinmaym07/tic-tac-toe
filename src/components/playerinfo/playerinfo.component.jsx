@@ -1,17 +1,12 @@
 import React from 'react';
+import './playerinfo.styles.scss';
 
-
-const PlayerInfo = ({player1_points , player2_points})=> (
-    <div className="player-info">
-    <div className="player">
-      <h2>Player 1</h2>
-      <p>{player1_points}</p>
-    </div>
-    <div className="player">
-      <h2>Player 2</h2>
-      <p>{player2_points}</p>
-    </div>
-</div>
+const PlayerInfo = ({id,player , points})=> (
+    
+      <div className="player" key={id}>
+        <h2>{player}</h2>
+        <p>{points}</p>
+      </div>
 );
 
 export default PlayerInfo;

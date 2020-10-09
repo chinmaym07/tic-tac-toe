@@ -1,0 +1,11 @@
+.buttons{
+    height: 125px;
+    width: 125px;
+    font-size: 70px;
+    background-color: #eeeeee;
+    border:1px solid black;
+    
+    &:hover {
+        background-color: darkgray;
+    }
+}
