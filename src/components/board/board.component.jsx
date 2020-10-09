@@ -68,8 +68,8 @@ const Board = ({history,player1 , player2}) => {
             </div>
             <Result result={result}/>
             <div className="buttons-2">
-                <button className="reset" onClick={(e)=>handleReset(e)}>Reset</button>
-                <button className="new-game" onClick={(e)=>handleNew(e)}>New Game</button>
+                <button className="comm-button" onClick={(e)=>handleReset(e)}>Reset</button>
+                <button className="comm-button" onClick={(e)=>handleNew(e)}>New Game</button>
             </div>
             
     </div>

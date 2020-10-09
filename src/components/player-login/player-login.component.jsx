@@ -16,20 +16,22 @@ const PlayerLogin = ({player1,player2,setPlayer1 , setPlayer2,history}) => {
             <form method='post' onSubmit={(e)=> history.push('/game')} className="input-form">
                 <fieldset className="name">
                     <legend>Player 1 Name</legend>
-                    <input type="text" name="player1-name" value={player1} onChange={(e,id=1)=>handleChange(e,id,e.target.value)} required/>
+                    <input className="names" type="text" name="player1-name" value={player1} onChange={(e,id=1)=>handleChange(e,id,e.target.value)} required/>
+                    <span className="required">*</span>
                 </fieldset>
                 <br />
                 <fieldset className="name">
                     <legend>Player 2 Name</legend>
-                    <input type="text" name="player2-name" value={player2} onChange={(e,id=2)=>handleChange(e,id,e.target.value)} required/>
+                    <input className="names" type="text" name="player2-name" value={player2} onChange={(e,id=2)=>handleChange(e,id,e.target.value)} required/>
+                    <span className="required">*</span>
                 </fieldset>
                 <br />
                 <br />
                 {
                     player1 !== '' && player2 !== '' ?
-                    <input type="submit" value="Start Game"/>
+                    <input className="start" type="submit" value="Start Game"/>
                     :
-                    <input type="submit" value="Start Game" disabled/>
+                    <input className="start" type="submit" value="Start Game" disabled/>
                 }  
             </form>
         </div>
