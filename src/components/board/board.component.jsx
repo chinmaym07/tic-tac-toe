@@ -6,7 +6,7 @@ import Result from '../result/result.component';
 import {checkWinner} from '../../utils/board/board.utils';
 import CustomButton from '../custom-button/custom-button.component';
 
-const Board = ({history,player1 , player2}) => {   
+const Board = ({player1 , player2,history}) => {   
    
     const [squares,setSquares] = useState(Array(9).fill(null));
     const [turn,setTurn] = useState(0);

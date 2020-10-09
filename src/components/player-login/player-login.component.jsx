@@ -10,10 +10,16 @@ const PlayerLogin = ({player1,player2,setPlayer1 , setPlayer2,history}) => {
             setPlayer2(name);
         e.preventDefault();
     }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        history.push('/game');
+        
+    }
     return (
         <div className="player-login">
             <h1>Player's Information</h1>
-            <form method='post' onSubmit={(e)=> history.push('/game')} className="input-form">
+            <form method='post' onSubmit={(e)=> handleSubmit(e)} className="input-form">
                 <fieldset className="name">
                     <legend>Player 1 Name</legend>
                     <input className="names" type="text" name="player1-name" value={player1} onChange={(e,id=1)=>handleChange(e,id,e.target.value)} required/>

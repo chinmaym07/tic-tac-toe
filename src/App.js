@@ -14,8 +14,8 @@ function App() {
         <h1>Tic Tac Toe</h1>
       </div>
       <Switch>
-        <Route path='/' render={(routeProps) => (<PlayerLogin player1={player1} player2={player2} setPlayer1={setPlayer1} setPlayer2={setPlayer2} {...routeProps}/>)} />
-        <Route path='/game'render={(routeProps)=>(<Board player1={player1} player2={player2} {...routeProps}/>)} />
+        <Route exact path='/' render={(routeProps) => (<PlayerLogin player1={player1} player2={player2} setPlayer1={setPlayer1} setPlayer2={setPlayer2} {...routeProps}/>)} />
+        <Route exact path='/game' render={(routeProps)=>(<Board player1={player1} player2={player2} {...routeProps}/>)} />
       </Switch>
       <Footer />
     </div>
