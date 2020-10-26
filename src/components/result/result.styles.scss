@@ -1,7 +1,13 @@
 .result
 {
-    padding: 5px 50px;
+    padding: 5px 5px;
     font-size: 25px;
     color:red;
     height:70px;
+}
+@media(max-width:350px)
+{
+    .result{
+        height:100px;
+    }
 }

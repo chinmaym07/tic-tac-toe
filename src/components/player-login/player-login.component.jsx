@@ -18,7 +18,7 @@ const PlayerLogin = ({player1,player2,setPlayer1 , setPlayer2,history}) => {
     }
     return (
         <div className="player-login">
-            <h1>Player's Information</h1>
+            <h1 className="player-infr">Player's Information</h1>
             <form method='post' onSubmit={(e)=> handleSubmit(e)} className="input-form">
                 <fieldset className="name">
                     <legend>Player 1 Name</legend>

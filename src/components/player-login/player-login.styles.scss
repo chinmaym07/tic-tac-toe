@@ -2,15 +2,16 @@
 {   
     display: flex;
     flex-direction:column;
-    height: 570px;
-    padding: 10px 50px;
+    height: 710px;
+    padding: 5px 15px;
+    
 }
 .input-form{
-    width: 30%;
+    width: 35%;
     align-self: center;
-    padding: 20px 50px;
+    padding: 10px 15px;
     .names{
-        width: 70%;
+        width: 80%;
         font-size: 18px;
     }
     .required {
@@ -34,4 +35,55 @@
 }
 .name{
     border: 4px solid grey;
+}
+
+@media (min-width:1001px)
+{
+    
+    .player-infr
+    {
+        font-size: 45px;
+    }
+    .input-form{
+        width: 45%;
+        
+    }
+}
+@media (min-width:600px) and (max-width:1000px)
+{
+    .player-infr
+    {
+        font-size: 45px;
+    }
+    .input-form{
+        width: 60%;
+    }
+}
+
+@media (min-width:350px) and (max-width:599px)
+{
+    
+    .player-infr
+    {
+        font-size: 45px;
+    }
+    .input-form{
+        width: 80%;
+    }
+}
+
+
+@media(max-width:349px)
+{
+    
+    .player-infr
+    {
+        font-size: 35px;
+    }
+    .input-form{
+        width: 95%;
+    }
+    .names{
+        width: 50%;
+    }
 }

@@ -1,5 +1,5 @@
 .container{
-    height: 760px;
+    height: 714px;
 }
 .board
 {
@@ -15,7 +15,7 @@
 {
   display: flex;
   justify-content: space-around;
-  padding: 0px 50px;
+  
 }
 .buttons-2
 {
@@ -34,4 +34,47 @@
             color: snow;
         }
     }
+}
+
+@media (min-width:320px) and (max-width:400px)
+{
+    .board
+    {
+        padding: 10px 10px;
+        margin: 10px;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 100px 100px 100px;
+        
+    }
+    .player-info
+    {
+        display: flex;
+        justify-content: space-around;
+        padding: 0px;
+    }
+    
+
+}
+@media (min-width:200px) and (max-width:319px)
+{
+    .board
+    {
+        padding: 10px 10px;
+        margin: 10px;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 70px 70px 70px;
+        
+    }
+    .player-info
+    {
+        display: flex;
+        justify-content: space-around;
+        padding: 0px;
+    }
+    
+
 }

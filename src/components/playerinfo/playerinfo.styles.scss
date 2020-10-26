@@ -8,3 +8,23 @@
     font-size:20px;
 
 }
+
+@media (min-width:300px) and (max-width:400px)
+{
+    .player
+    {
+        width: 100px;
+        padding: 5px 20px;
+    }
+
+}
+@media (min-width:200px) and (max-width:299px)
+{
+    .player
+    {
+        width: 80px;
+        font-size:15px;
+        padding: 5px 5px;
+    }
+
+}
