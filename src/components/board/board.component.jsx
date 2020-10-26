@@ -15,7 +15,6 @@ const Board = ({player1 , player2,history}) => {
     const [player2_points , setPointsPlayer2] = useState(0);
    
     useEffect(() => {
-        console.log('I am Fired');
         if(checkWinner(squares , turn))
         {
             //console.log(turn);
