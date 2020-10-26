@@ -1,5 +1,6 @@
 import React from 'react';
 import './result.styles.scss';
+
 const Result = ({result})=> (
     <div className="result">
         <p>
